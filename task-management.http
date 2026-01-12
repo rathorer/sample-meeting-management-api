@@ -1,0 +1,20 @@
+@task_management_HostAddress = http://localhost:5243
+
+GET {{task_management_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+//Test data
+const apiEndpoint = 'http://localhost:5243/meetingmanagement'; // A fake API endpoint for testing
+let startTime = new Date();
+let endTime = new Date();
+startTime.setHours(startTime.getHours()+44)
+endTime.setHours(endTime.getHours()+45);
+
+const postPayload = {
+    title: "Some random meeting-5",
+    startTime: startTime,
+    endTime: endTime,
+    attendees: ["Rahul R", "Aditya T"]
+}
